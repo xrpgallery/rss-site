@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Feed Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>RSS Feed Manager</h1>
+
+        <form id="feedForm">
+            <label for="feedTitle">Feed Title</label>
+            <input type="text" id="feedTitle" placeholder="e.g., Jack Rippler" required>
+            
+            <label for="feedLink">Feed Link</label>
+            <input type="url" id="feedLink" placeholder="e.g., https://x.com/RippleXrpie" required>
+            
+            <label for="webhookLink">Webhook Link</label>
+            <input type="url" id="webhookLink" placeholder="e.g., https://hook.eu2.make.com/..." required>
+
+            <label for="schedule">Schedule</label>
+            <select id="schedule">
+                <option value="3">Every 3 hours</option>
+                <option value="6">Every 6 hours</option>
+                <option value="12">Every 12 hours</option>
+            </select>
+            
+            <button type="submit">Add Feed</button>
+        </form>
+
+        <div id="feeds">
+            <h2>Feeds</h2>
+            <ul id="feedList"></ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
