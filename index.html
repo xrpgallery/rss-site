@@ -5,36 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSS Feed Manager</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <header>
         <h1>RSS Feed Manager</h1>
+    </header>
 
-        <form id="feedForm">
-            <label for="feedTitle">Feed Title</label>
-            <input type="text" id="feedTitle" placeholder="e.g., Jack Rippler" required>
-            
-            <label for="feedLink">Feed Link</label>
-            <input type="url" id="feedLink" placeholder="e.g., https://x.com/RippleXrpie" required>
-            
-            <label for="webhookLink">Webhook Link</label>
-            <input type="url" id="webhookLink" placeholder="e.g., https://hook.eu2.make.com/..." required>
+    <main>
+        <section class="feed-container">
+            <div class="feed-header">
+                <h2>Feed Sources</h2>
+                <button id="newFeedBtn">+ New Feed Source</button>
+            </div>
+            <ul id="feedList">
+                <li>
+                    <span class="feed-title">Jack Rippler</span>
+                    <span class="status on">On</span>
+                    <a href="#" class="feed-link">Feeds</a>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-            <label for="schedule">Schedule</label>
-            <select id="schedule">
-                <option value="3">Every 3 hours</option>
-                <option value="6">Every 6 hours</option>
-                <option value="12">Every 12 hours</option>
-            </select>
-            
-            <button type="submit">Add Feed</button>
-        </form>
-
-        <div id="feeds">
-            <h2>Feeds</h2>
-            <ul id="feedList"></ul>
-        </div>
-    </div>
+    <footer>
+        <p>All Rights Reserved © 2025</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
